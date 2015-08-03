@@ -21,4 +21,11 @@ RUN pip install --upgrade pip
 RUN pip install --upgrade virtualenv
 RUN pip install pyramid
 
+RUN easy_install "python_dateutil<=1.9"
+RUN easy_install "webtest"
+RUN easy_install "pymssql"
+RUN easy_install "zope.sqlalchemy"
+RUN easy_install "pyramid-debugtoolbar"
+RUN easy_install "pyramid-tm"
+
 RUN a2enmod wsgi
