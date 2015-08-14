@@ -1,3 +1,4 @@
+#python base
 FROM docker.cucloud.net/apache22
 
 # File Author / Maintainer
@@ -16,16 +17,11 @@ RUN apt-get install -y libsasl2-dev
 RUN apt-get install -y freetds-dev
 RUN apt-get install -y byacc flex
 
+RUN apt-get clean
+
 RUN pip install python-ldap
 RUN pip install --upgrade pip
 RUN pip install --upgrade virtualenv
 RUN pip install pyramid
-
-RUN easy_install "python_dateutil<=1.9"
-RUN easy_install "webtest"
-RUN easy_install "pymssql"
-RUN easy_install "zope.sqlalchemy"
-RUN easy_install "pyramid-debugtoolbar"
-RUN easy_install "pyramid-tm"
 
 RUN a2enmod wsgi
