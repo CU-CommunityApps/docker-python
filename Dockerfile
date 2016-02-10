@@ -1,5 +1,5 @@
 #python base
-FROM docker.cucloud.net/apache22
+FROM dtr.cucloud.net/cs/apache22
 
 # File Author / Maintainer
 MAINTAINER Jay Hulslander <jdh34@cornell.edu>
