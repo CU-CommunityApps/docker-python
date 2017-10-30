@@ -19,9 +19,9 @@ RUN apt-get install -y byacc flex
 
 RUN apt-get clean
 
-RUN pip install python-ldap
-RUN pip install --upgrade pip
+RUN pip install --index-url=https://pypi.python.org/simple/ --upgrade pip
 RUN pip install --upgrade virtualenv
+RUN pip install python-ldap
 RUN pip install pyramid
 
 RUN a2enmod wsgi
